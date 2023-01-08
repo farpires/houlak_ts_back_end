@@ -1,0 +1,23 @@
+{
+  "name": "holuak_ts_back_end",
+  "version": "1.0.0",
+  "description": "En este repositorio se desarrolla un desafío presentado por la gente de Houlak.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farpires/holuak_ts_back_end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farpires/holuak_ts_back_end/issues"
+  },
+  "homepage": "https://github.com/farpires/holuak_ts_back_end#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
