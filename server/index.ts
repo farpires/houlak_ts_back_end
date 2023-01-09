@@ -2,7 +2,7 @@ import express,{Application} from 'express';
 import CONFIG from '../config';
 import artistRouter from '../routes/artist';
 import informationRouter from '../routes/information';
-
+import cors from 'cors';
 
 class Server {
 
@@ -16,7 +16,13 @@ class Server {
     constructor(){
         this.app = express();
         this.port = CONFIG.PORT || '5000';
+        this.middlewares();
         this.routes();
+    }
+
+    middlewares(){
+        this.app.use(cors());
+        this.app.use(express.json());
     }
 
     routes(){
