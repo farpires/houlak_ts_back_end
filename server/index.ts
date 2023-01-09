@@ -3,6 +3,7 @@ import CONFIG from '../config';
 import artistRouter from '../routes/artist';
 import informationRouter from '../routes/information';
 import cors from 'cors';
+import db from '../db/connection';
 
 class Server {
 
@@ -16,8 +17,18 @@ class Server {
     constructor(){
         this.app = express();
         this.port = CONFIG.PORT || '5000';
+        this.dbConnection();
         this.middlewares();
         this.routes();
+    }
+
+    async dbConnection() {
+        try {
+            await db.authenticate();
+            console.log('online database');
+        } catch (error) {
+            throw new Error('offline database');
+        }
     }
 
     middlewares(){
