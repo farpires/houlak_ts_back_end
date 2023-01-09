@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/farpires/holuak_ts_back_end#readme",
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.15",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
