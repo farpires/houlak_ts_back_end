@@ -1,11 +1,17 @@
 import { Request, Response } from "express";
+import Information from "../models/information";
 
-export const postInformation = (req: Request, res: Response) => {
+export const postInformation = async (req: Request, res: Response) => {
 
     const {body} = req;
     
-    res.json({
-        msg: 'postInformation',
-        body
-    })
+    try {
+        const result = await Information.create(body);
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+        msg: 'contact admin',
+        })
+    }    
 }
