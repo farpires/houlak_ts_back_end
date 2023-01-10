@@ -14,5 +14,11 @@ export default {
         password: process.env.PASSWORD,
         host: process.env.HOST_NAME,
         dialect: process.env.DIALECT,
-      },
+    },
+    TOKEN: {
+        url: process.env.TOKEN_URL,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+    },
+    BASE_URL: process.env.BASE_URL
 }
