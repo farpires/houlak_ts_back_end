@@ -6,6 +6,7 @@ export interface IArtistData {
     label: string;
     name: string;
     popularity: number;
+    external_urls: string;
 }
 
 interface Artist {
