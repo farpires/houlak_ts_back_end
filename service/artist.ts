@@ -22,6 +22,7 @@ const getArtistData = async (artistId: string, dataType: string): Promise<TGetAr
                 label: info.data.label,
                 name: info.data.name,
                 popularity: info.data.popularity,
+                external_urls: info.data.external_urls.spotify,
             });
 
         };
